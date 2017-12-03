@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bukatoko</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/sosmed.css">
+    <style type="text/css">
+      @font-face{
+          font-family: "cendol_pulut";
+          src: url('Cendol_Pulut.ttf');
+      }
+      @font-face{
+        font-family: "";
+        src: url('');
+      }
+
+    </style>
+  <body>
+    <nav class="navbar navbar-default" style="background-color:#D9597E;">
+      <a href="index.html" class="navbar-brand"><img src="logo.png" style="margin-bottom:5px; "/></a>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#target-list">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="target-list">
+        <ul class="nav navbar-nav" style="float:left;color:#D9597E;">
+          <li><a href="index.html" style="color:#AA2B00; font-family: 'cendol_pulut'"><div class="glyphicon glyphicon-home"></div> Home</a></li>
+          <li><a href="beli.html" style="color:#AA2B00; font-family: 'cendol_pulut'"><div class="glyphicon glyphicon-shopping-cart"></div> Beli</a></li>
+          <li><a href="about_us.html" style="color:#AA2B00; font-family: 'cendol_pulut'"><div class="glyphicon glyphicon-upload"></div> About Us</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default"><div class="glyphicon glyphicon-search"></div></button>
+        </form>
+        <ul class="nav navbar-nav" style="float:right;color:#D9597E;">
+          <li class="active" style="color:#5C0707;"><a href="sign_up.html" style="font-family: 'cendol_pulut'"><div class="glyphicon glyphicon-registration-mark"></div> Sign Up</a></li>
+          <li class="dropdown">
+           <a href="" class="dropdown-toggle " data-toggle="dropdown" style="color:#AA2B00; font-family: 'cendol_pulut';">
+           <div class="glyphicon glyphicon-registration-mark"></div> Sign in</a>
+           <ul class="dropdown-menu dropdown-menu-right" style="padding: 15px;min-width: 250px;">
+              <li>
+                 <div class="row">
+                    <div class="col-md-12">
+                       <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                        <h3 style="text-align: center;">Login Ke Bukatoko</h3>
+                          <div class="form-group">
+                             <label class="sr-only" for="exampleInputEmail2">Username</label>
+                             <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Username" name="username" required>
+                          </div>
+                          <div class="form-group">
+                             <label class="sr-only" for="exampleInputPassword2">Password</label>
+                             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" name="password" required>
+                          </div>
+                          <div><a href="lupa.html">Lupa Password</a></div>
+                          <div class="form-group">
+                             <button type="submit" class="btn btn-success btn-block">Sign in</button>
+                          </div>
+                       </form>
+                    </div>
+                 </div>
+              </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-3">
+          <h1 style="text-align: center;">Sign Up</h1>
+          <h3 style="text-align: center;">Mari bergabung dengan lapak kami</h3>
+          <form action="input_user.php" method="post" style="padding: 10px;">
+            <h5>Masukkan Nama</h5>
+            <input type="text" class="form-control " placeholder="Nama" name="nama" size="25"></input>
+            <h5>Gender</h5>
+            <label class="radio-inline"><input type="radio" name="jenis_kelamin">L</label>
+            <label class="radio-inline"><input type="radio" name="jenis_kelamin">P</label><br>
+            <h5>Tanggal Lahir</h5>
+            <input type='text' class="form-control" id='datetimepicker1' name="tgl_lahir"/>
+            <script type="text/javascript">
+              $(function () {
+                  $('#datetimepicker1').datetimepicker();
+              });
+            </script>
+            <h5>No Rekening *dibutuhkan untuk melakukan transaksi*</h5>
+            <input type="text" class="form-control" placeholder="No Rekening" name="no_rekening" size="30"></input>
+            <h5>No Telepon *dibutuhkan untuk melakukan transaksi*</h5>
+            <input type="text" class="form-control" placeholder="No Telepon" name="no_telepon" size="12"></input>
+            <h5>Alamat *dibutuhkan untuk melakukan transaksi*</h5>
+            <textarea class="form-control" rows="5" name="alamat"></textarea>
+            <h5>Kabupaten/Kota</h5>
+            <input type="text" class="form-control" placeholder="Kota/Kabupaten" name="kota_kab"></input>
+            <h5>Kecamatan</h5>
+            <input type="text" class="form-control" placeholder="Kecmantan" name="kecamatan"></input>
+            <h5>Kelurahan/Desa</h5>
+            <input type="text" class="form-control" placeholder="Kel/Desa" name="kelurahan_desa"></input><br>
+            <h5>Username</h5>
+            <input type="text" class="form-control" placeholder="Username" name="username"></input>
+            <h5>Password</h5>
+            <input type="password" class="form-control" placeholder="Password" name="password"></input>
+            <h5>Konfirmasi Password</h5>
+            <input type="password" class="form-control" placeholder="Password" name="password"></input><br>
+            <p>dengan menekan tombol submit maka anda menyatakan bahwa data yg ada diatas adalah valid</p>
+            <button type="submit" value="Tambah" class="btn btn-primary btn-lg">SUBMIT</button>
+          </form>
+        </div>
+        <aside id="sticky-social"> <!--medsos sidebar-->
+          <ul>
+            <li><a href="#" class="entypo-facebook" target="_blank"><span>Facebook</span></a></li>
+            <li><a href="#" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
+            <li><a href="#" class="entypo-gplus" target="_blank"><span>Google+</span></a></li>
+            <li><a href="#" class="entypo-instagrem" target="_blank"><span>Instagram</span></a></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+    <div class="col-md-12 col-xs-12" style="background:#D9597E; height:300px; margin-top: 50px; padding-top: 30px;">
+      <h1 style="text-align: center; color:white;">Bantu Kami Melakukan Pengembangan</h1>
+    </div>
+    <script src="D:/Document/Kuliah/P Aplikasi Web/Bukatoko/js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
