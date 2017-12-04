@@ -11,4 +11,4 @@ services:
   - docker
   - mysql
 
-script: "phpunit --testsuite=unit --coverage-text"
+script: "phpunit InputTest.php"
